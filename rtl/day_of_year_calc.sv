@@ -52,7 +52,7 @@ module day_of_year_calc
    // ----------
    // ROM storage years divinded on 100
    always_comb begin
-      unique case ( year[10:2] )
+      case ( year[10:2] )
 	9'b000_0110_01,   // Num 100 in bin
         9'b000_1100_10,   // Num 200 in bin
 	9'b001_0010_11,   // Num 300 in bin
