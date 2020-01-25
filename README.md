@@ -1,2 +1,2 @@
-# Verilog-HDL-Day_of_year_calc
+# DAY OF YEAR CALCULATOR
 This is realization day of year calculator without divide function.
