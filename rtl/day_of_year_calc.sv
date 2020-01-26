@@ -50,24 +50,24 @@ module day_of_year_calc
    end // always_comb
 
    // ----------
-   // ROM storage years divinded on 100
+   // Selector leap year (from 0 to 2000)
    always_comb begin
       case ( year[10:2] )
-	9'b000_0110_01,   // Num 100 in bin
-        9'b000_1100_10,   // Num 200 in bin
-	9'b001_0010_11,   // Num 300 in bin
-	9'b001_1111_01,   // Num 500 in bin
-        9'b010_0101_10,   // Num 600 in bin
-	9'b010_1011_11,   // Num 700 in bin
-        9'b011_1000_01,   // Num 900 in bin
-	9'b011_1110_10,   // Num 1000 in bin
-        9'b100_0100_11,   // Num 1100 in bin
-	9'b101_0001_01,   // Num 1300 in bin
-        9'b101_0111_10,   // Num 1400 in bin
-	9'b101_1101_11,   // Num 1500 in bin
-        9'b110_1010_01,   // Num 1700 in bin
-	9'b111_0000_10,   // Num 1800 in bin
-        9'b111_0110_11:   // Num 1900 in bin
+	9'b000_0110_01,   // Num 100 in bin without [1] and [0] bit's
+        9'b000_1100_10,   // Num 200 in bin without [1] and [0] bit's
+	9'b001_0010_11,   // Num 300 in bin without [1] and [0] bit's
+	9'b001_1111_01,   // Num 500 in bin without [1] and [0] bit's
+        9'b010_0101_10,   // Num 600 in bin without [1] and [0] bit's
+	9'b010_1011_11,   // Num 700 in bin without [1] and [0] bit's
+        9'b011_1000_01,   // Num 900 in bin without [1] and [0] bit's
+	9'b011_1110_10,   // Num 1000 in bin without [1] and [0] bit's
+        9'b100_0100_11,   // Num 1100 in bin without [1] and [0] bit's
+	9'b101_0001_01,   // Num 1300 in bin without [1] and [0] bit's
+        9'b101_0111_10,   // Num 1400 in bin without [1] and [0] bit's
+	9'b101_1101_11,   // Num 1500 in bin without [1] and [0] bit's
+        9'b110_1010_01,   // Num 1700 in bin without [1] and [0] bit's
+	9'b111_0000_10,   // Num 1800 in bin without [1] and [0] bit's
+        9'b111_0110_11:   // Num 1900 in bin without [1] and [0] bit's
 	  is_leap_year = 0;
 	default:
 	  is_leap_year = ( year[1:0] == 2'b00 );
