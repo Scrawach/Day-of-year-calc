@@ -1,7 +1,6 @@
 ////////////////////////////////
 // ----------
 // Module : day_of_year_calc.sv
-// Author : Kuznetsov Aleksander
 // Date   : January 25, 2020
 // ----------
 // Description:
